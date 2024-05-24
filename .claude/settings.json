@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "attribution": {
+    "commit": "Co-authored-by: Claude <noreply@anthropic.com>",
+    "pr": "Generated with Claude Code"
+  },
+  "language": "japanese",
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:*.github.com)",
+      "WebFetch(domain:*.githubusercontent.com)",
+      "WebFetch(domain:go.dev)",
+      "WebFetch(domain:*.go.dev)",
+      "WebFetch(domain:*.ntt.com)"
+    ],
+    "ask": [
+      "Edit(.github/workflows/**)",
+      "Edit(.gitignore)"
+    ],
+    "deny": [
+      "Edit(go.sum)",
+      "Bash(rm:*)",
+      "Bash(sudo:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)"
+    ],
+    "disableBypassPermissionsMode": "disable"
+  },
+  "sandbox": {
+    "allowUnsandboxedCommands": false,
+    "autoAllowBashIfSandboxed": true,
+    "enableWeakerNetworkIsolation": true,
+    "enabled": true,
+    "failIfUnavailable": true,
+    "filesystem": {
+      "denyWrite": [
+        ".github/workflows",
+        ".gitignore"
+      ]
+    }
+  }
+}
